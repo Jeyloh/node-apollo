@@ -1,0 +1,105 @@
+# Write your query or mutation here
+mutation CreateNote {
+  newNote (content:"Dette er et notat") {
+    content
+    id
+    favoriteCount
+    author
+  }
+}
+
+mutation DeleteNote {
+  deleteNote (id: "5e8dffee6b37976e9cab26bf")
+}
+
+mutation UpdateNote {
+	  updateNote(
+      id: "5e8dffee6b37976e9cab26bf",
+      content: "Someone updated my note!!"
+    ) {
+    id
+  	content
+    favoriteCount
+    createdAt
+    updatedAt
+  }
+}
+
+mutation ToggleFav {
+  toggleFavorite(id: "5e8dffee6b37976e9cab26bf") {
+    favoriteCount
+  }
+}
+
+query GetNotes {
+  notes {
+    id
+    content
+    favoriteCount
+    author
+    createdAt
+    updatedAt
+  }
+}
+
+query GetNoteById {
+  note (id: "5e8dffee6b37976e9cab26bf") {
+    id
+    content
+    author
+    createdAt
+    updatedAt
+  }
+}
+
+mutation SignUp {
+  signUp(
+    username:"BeeBop"
+    email:"notarobot@mail.com",
+    password: "WhatIsLif3"
+  )
+}
+mutation SignIn {
+  signIn(
+    username:"BeeBop"
+    email:"notarobot@mail.com",
+    password: "WhatIsLif3"
+  )
+}
+
+
+query GetUserByUsername {
+  user(username:"BeeBop") {
+    username
+    email
+    id
+  }
+}
+
+
+query getUsers {
+  users {
+    username
+    email
+    id
+  }
+}
+
+query getMe {
+  me {
+    username
+    email
+    id
+  }
+}
+
+query NestedNoteAndUser {
+  note(id:"5e8dffee6b37976e9cab26bf") {
+    id
+    content
+    author {
+      username
+      id
+    }
+  }
+}
