@@ -1,0 +1,15 @@
+.admin-panel {
+    background: #3c3c3c;
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+}
+.admin-panel * {
+    color: white;
+}
+
+.admin-panel button {
+    background: transparent;
+    border: 1px solid white;
+    padding: .2em;
+}

@@ -1,0 +1,14 @@
+.note-masonry {
+    height: 100%;
+}
+
+.sync-btn {
+    margin: 1em 0.5em;
+}
+
+.note--masonry-wrapper {
+    margin: 0 1em;
+}
+.note--masonry-wrapper h3 {
+    margin: 2em 0;
+}
